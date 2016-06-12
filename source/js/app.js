@@ -2,7 +2,7 @@
   'use strict';
 
   setTimeout(function() {
-    document.querySelector('.greating_picture').classList.add('m--show');
+    document.querySelector("#myCard").classList.toggle("flip")
   }, 1000);
 })();
 

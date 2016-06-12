@@ -33,80 +33,6 @@ body {
   }
 }
 
-h1 {
-	font-family: 'robotomedium',sans-serif;
-   font-size: 28px;
-   color: #455a64;
-}
-p {
-	font-family: 'robotoregular';
-	font-size: 16px;
-	color: #86949c;
-}
-.mainframe {
-	height: 400px;
-	width: 385px;
-	background-color: #fff;
-	opacity: 0.9;
-	position: absolute;
-  	top: 50%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
-  	text-align: center;
-  	padding-top: 37px;
-  	border-radius: 5px;
-  	flex: 1 0 auto;
-}
-
-.info {
-	border-radius: 5px;
-	background-color: #13b6a1;
-	position: absolute;
-    left: 0;
-    bottom: 0;
-    font-family: 'robotomedium',sans-serif;
-}
-
-a {
-	border-right: 2px solid #fff;
-	display: inline-flex;
-	padding: 12px 32px;
-	color: #fff;
-	background-color: #13b6a1;
-	cursor: pointer;
-	border-bottom-radius: 5px;
-	
-	&:hover{
-		background-color: #088c85;
-	}
-	&:nth-of-type(1) {
-    	
-    	border-bottom-left-radius: 5px;
-    }
-    &:nth-of-type(3) {
-    	border: 0;
-    	border-bottom-right-radius: 5px;
-    
-
-    }
-}
-
-.page {
- 
-  flex: 1 0 auto; // Равно высоте футера
-}
-
-svg {
-	margin: 0 17px;
-}
-.icons {
-	
-	fill:#6fd1c6;
-	&:hover {
-		fill:#00bfa5;
-	}
-}
-
 
 footer {
 	flex: 0 0 auto;
@@ -117,5 +43,61 @@ footer {
 	color: #fff;
 	
 }
+ 
+/* ============Authorization ============ */
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .page__front, .page__back {
+	height: 400px;
+	width: 385px;
+	opacity: 1;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	text-align: center;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.page__front, .page__back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.page__front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.page__back {
+	transform: rotateY(180deg);
+}
+
+
 
 @import 'common/greating';
+@import 'common/front__page.scss';
+@import 'common/back_page.scss';
