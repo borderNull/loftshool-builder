@@ -1,5 +1,121 @@
+html,body {
+	height: 100%;
+}
+
 body {
   margin: 0;
+  background-image: url(../img/newback.png);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.auth {
+  width: 180px;
+  height: 20px;
+  right: 20px;
+  top: 26px;
+  position: absolute;
+
+}
+
+.button {
+   font-family: 'robotoregular', sans-serif;
+  padding:  15px 0 ;
+  border: 2px solid #fff;
+  text-align: center;
+  border-radius: 8px;
+  color:#fff;
+  &:hover {
+    background-color: #fff;
+    color:#00bfa5; 
+  }
+}
+
+h1 {
+	font-family: 'robotomedium',sans-serif;
+   font-size: 28px;
+   color: #455a64;
+}
+p {
+	font-family: 'robotoregular';
+	font-size: 16px;
+	color: #86949c;
+}
+.mainframe {
+	height: 400px;
+	width: 385px;
+	background-color: #fff;
+	opacity: 0.9;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	text-align: center;
+  	padding-top: 37px;
+  	border-radius: 5px;
+  	flex: 1 0 auto;
+}
+
+.info {
+	border-radius: 5px;
+	background-color: #13b6a1;
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    font-family: 'robotomedium',sans-serif;
+}
+
+a {
+	border-right: 2px solid #fff;
+	display: inline-flex;
+	padding: 12px 32px;
+	color: #fff;
+	background-color: #13b6a1;
+	cursor: pointer;
+	border-bottom-radius: 5px;
+	
+	&:hover{
+		background-color: #088c85;
+	}
+	&:nth-of-type(1) {
+    	
+    	border-bottom-left-radius: 5px;
+    }
+    &:nth-of-type(3) {
+    	border: 0;
+    	border-bottom-right-radius: 5px;
+    
+
+    }
+}
+
+.page {
+ 
+  flex: 1 0 auto; // Равно высоте футера
+}
+
+svg {
+	margin: 0 17px;
+}
+.icons {
+	
+	fill:#6fd1c6;
+	&:hover {
+		fill:#00bfa5;
+	}
+}
+
+
+footer {
+	flex: 0 0 auto;
+	height: 50px;
+	font-size: 16px;
+	text-align: center;
+	font-family: 'robotolight',sans-serif;
+	color: #fff;
+	
 }
 
 @import 'common/greating';
