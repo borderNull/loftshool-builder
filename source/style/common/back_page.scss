@@ -1,3 +1,9 @@
+.authorize h2 {
+  font-family: 'BERNIERRegular-Regular',sans-serif;
+  font-size: 35px;
+  color: #455a64;
+}
+
 .login__input {
     width: 270px;
     height: 46px;
@@ -15,7 +21,7 @@
 .login__img {
       background: url(../img/login.png) no-repeat;
     position: absolute;
-    top: 117px;
+    top: 113px;
     left: 16px;
     background-position: 16px;
     font-size: 17px;
@@ -31,7 +37,7 @@
 .pass__img {
     background: url(../img/key.png) no-repeat;
     position: absolute;
-    top: 195px;
+    top: 191px;
     left: 16px;
     background-position: 16px;
     font-size: 17px;
@@ -46,7 +52,7 @@
 	 width: 270px;
     height: 46px;
     margin: 15px; 
-    outline: none; /*убираем стандартную обводку браузера*/
+    outline: none; 
     padding-left: 30px; 
     font-size: 17px;
     border-radius: 5px;
@@ -55,7 +61,13 @@
     box-shadow: 0px 0px 5px #cdd1da;
 }
 
+p.check__question {
+  margin: 0 0 17px 0;
+  font-family: 'robotoregular',sans-serif;
+  font-size: 16px;
+}
 
+/* ============CHECKBOX AND RADIO STYLE =============== */
  input[type=checkbox] {
 	display:none;
 }
@@ -158,36 +170,37 @@ label[for="radio-1"] {
     opacity: 0;
     
 }
-
-
-
+/* ========= BOTTOM BACK PAGE ================ */
 .info__login {
-	position: absolute;
-    left: 0;
-    bottom: 0;
-    font-family: 'robotomedium',sans-serif;
-    & a {
-	display: inline-flex;
-	color: #fff;
-	background-color: #13b6a1;
-	border-bottom-radius: 5px;
-    }
-    & a:hover {
-    	background-color: #088c85;
-    }
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-family: 'robotomedium',sans-serif;
 }
-.submit__form {
-	list-style: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	& a {
-		width: 100%;
-		padding: 12px 42px;
-	}
-	& a:nth-of-type(2) {
-		border-bottom-right-radius: 5px;
 
-	}
-	
+.submit__form {
+
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0 -1px 0 0; 
+  & a {
+    text-decoration: none;
+color: #fff;
+background-color: #13b6a1;
+padding: 12px 1px;
+  }
+  & a:hover {
+    background-color: #088c85;
+  }
+  & a {
+    width: 190px;
+  }
+  & a.first {
+    border-bottom-left-radius: 5px;
+  }
+  & a.last {
+    border-bottom-right-radius: 5px;
+  }
 }
+
