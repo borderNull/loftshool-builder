@@ -1,17 +1,39 @@
-.authorize h2 {
+.back__card_heading {
   font-family: 'BERNIERRegular-Regular',sans-serif;
   font-size: 35px;
   color: #455a64;
+  margin: 20px 0;
+}
+
+.right__rect-welcome {
+  width: 22px;
+  height: 5px;
+  background-color: #c5cbcd;
+  position: absolute;
+    left: 51px;
+    top: 38px;
+}
+
+.left__rect-welcome {
+  width: 22px;
+  height: 5px;
+  background-color: #c5cbcd;
+  position: absolute;
+    right: 51px;
+    top: 38px;
 }
 
 .login__input {
-    width: 270px;
+  margin-left: 46px;
+    width: 293px;
     height: 46px;
-    margin: 15px; 
+    margin-top: 5px; 
+    margin-bottom: 15px;
     outline: none; /*убираем стандартную обводку браузера*/
     padding-left: 30px; 
     font-size: 17px;
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     border: 0;
     opacity: 1;
     box-shadow: 0px 0px 5px #cdd1da;
@@ -21,11 +43,11 @@
 .login__img {
       background: url(../img/login.png) no-repeat;
     position: absolute;
-    top: 113px;
-    left: 16px;
+    top: 85px;
+    left: 23px;
     background-position: 16px;
     font-size: 17px;
-    height: 51px;
+    height: 50px;
     width: 45px;
     display: inline-block;
     background-color: #f0efe9;
@@ -37,11 +59,11 @@
 .pass__img {
     background: url(../img/key.png) no-repeat;
     position: absolute;
-    top: 191px;
-    left: 16px;
+    top: 151px;
+    left: 23px;
     background-position: 16px;
     font-size: 17px;
-    height: 52px;
+    height: 50px;
     width: 45px;
     display: inline-block;
     background-color: #f0efe9;
@@ -49,25 +71,35 @@
     border-bottom-left-radius: 5px;
 }
 .password__input {
-	 width: 270px;
+  margin-left: 46px;
+	 width: 293px;
     height: 46px;
-    margin: 15px; 
+    margin-top: 5px;
+    margin-bottom: 15px; 
     outline: none; 
     padding-left: 30px; 
     font-size: 17px;
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     border: 0;
     opacity: 1;
     box-shadow: 0px 0px 5px #cdd1da;
 }
 
-p.check__question {
+.check__question {
   margin: 0 0 17px 0;
-  font-family: 'robotoregular',sans-serif;
+  font-family: 'robotobold',sans-serif;
   font-size: 16px;
 }
 
 /* ============CHECKBOX AND RADIO STYLE =============== */
+
+.mainframe__check {
+  margin-top: 15px;
+  margin-bottom: 26px;
+font-family: 'robotoregular';
+font-size: 16px;
+}
  input[type=checkbox] {
 	display:none;
 }
@@ -77,46 +109,48 @@ p.check__question {
   opacity: 0;
 }
 .checkbox:not(checked) + label {
-  position: relative; /* будем позиционировать псевдочекбокс относительно label */
-  padding: 0 0 0 60px; /* оставляем слева от label место под псевдочекбокс */
+  position: relative; 
+  padding: 0 0 0 30px; 
 }
-/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+
 .checkbox:not(checked) + label:before {
   content: '';
   position: absolute;
-  top: -4px;
+  top: 0px;
   left: 0;
-  width: 50px;
-  height: 26px;
-  border-radius: 13px;
-  background: #CDD1DA;
-  box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+  width: 22px;
+  height: 20px;
+    background: #13b6a1;
+  
+  box-shadow: inset 1px 1px 4px rgba(0,0,0,.2);
 }
 /* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
 .checkbox:not(checked) + label:after {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: 2px;
-  width: 22px;
-  height: 22px;
-  border-radius: 10px;
-  background: #FFF;
-  box-shadow: 0 2px 5px rgba(0,0,0,.3);
-  transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
-}
+ }
 /* Меняем фон чекбокса, когда он включен. */
 .checkbox:checked + label:before {
   
   background: #13b6a1;
   
 }
-/* Сдвигаем переключатель чекбокса, когда он включен. */
+
 .checkbox:checked + label:after {
   left: 26px;
+  content: '\2713 ';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 22px;
+  height: 20px;
+   color: #fff;
+    background: #13b6a1;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  transition: all .2s;
 }
 
-
+.mainframe__radio {
+  font-family: 'robotolight';
+}
 
 label[for="radio-1"] {
 	margin-right: 26px;
@@ -204,3 +238,10 @@ padding: 12px 1px;
   }
 }
 
+.list__item__submit {
+   padding: 13px 61px;
+   background-color: #13b6a1;
+}
+.submit__form_link {
+  padding: 12px 1px;
+}

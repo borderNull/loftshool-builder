@@ -1,10 +1,10 @@
-h1 {
+.front__page_heading{
 	font-family: 'robotomedium',sans-serif;
    font-size: 28px;
    color: #455a64;
    margin: 9px 0 3px 0;
 }
-p {
+.front__page_text {
 	font-family: 'robotoregular';
 	font-size: 18px;
 	color: #86949c;
@@ -76,7 +76,7 @@ a.about--link.first{
   flex: 1 0 auto; // Равно высоте футера
 }
 
-svg {
+.svg {
 	margin: 0 12px;
 	
 
