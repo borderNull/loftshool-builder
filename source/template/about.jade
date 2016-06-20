@@ -1,0 +1,97 @@
+doctype html
+html
+  include common/_head
+  body
+   include common/_about_header
+   .about__wrapper
+    .container-about
+     .about__logo
+      h2.about__header
+       span.about__span Обо мне
+      //- include ../icons/about_header.svg
+     .about__info_block
+      .img-wrap
+       img(src="../assets/img/test.jpg").img_section
+      h4.about__heading Кто я
+      p.about__descr Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой    современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+      p.about__descr Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+    .container-skills
+     .skills__descr
+      h3.skills__heading Чем я могу быть вам&nbsp; полезен
+      p.skills__describe Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.
+     .skills_rounds
+          h2.section-title.section-title--abilities Frontend
+          .graphs
+            .graph
+              svg(width="110", height="110", class="graph__svg")
+                circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+                circle(r="45", cx="50%", cy="50%", stroke="#10c1a8", class="graph__fill graph__fill--html", transform="rotate(-90 55 55)")
+              span.graphs__text HTML5
+            .graph
+              svg(width="110", height="110", class="graph__svg")
+                circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+                circle(r="45", cx="50%", cy="50%", stroke="#10c1a8", class="graph__fill graph__fill--css", transform="rotate(-90 55 55)")
+              span.graphs__text CSS3
+            .graph
+              svg(width="110", height="110", class="graph__svg")
+                circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+                circle(r="45", cx="50%", cy="50%", stroke="#10c1a8", class="graph__fill graph__fill--js", transform="rotate(-90 55 55)")
+              span.graphs__text JavaScript & jQuerry
+          h2.section-title.section-title--abilities Backend
+          .graphs
+            .graph
+              svg(width="110", height="110", class="graph__svg")
+                circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+                circle(r="45", cx="50%", cy="50%", stroke="#86d0c2", class="graph__fill graph__fill--php", transform="rotate(-90 55 55)")
+              span.graphs__text PHP
+            .graph
+              svg(width="110", height="110", class="graph__svg")
+                circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+                circle(r="45", cx="50%", cy="50%", stroke="#86d0c2", class="graph__fill graph__fill--mysql", transform="rotate(-90 55 55)")
+              span.graphs__text mySQL
+            .graph
+              svg(width="110", height="110", class="graph__svg")
+                circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+                circle(r="45", cx="50%", cy="50%", stroke="#86d0c2", class="graph__fill graph__fill--node", transform="rotate(-90 55 55)")
+              span.graphs__text Node.js & npm
+            .graph
+              svg(width="110", height="110", class="graph__svg")
+                circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+                circle(r="45", cx="50%", cy="50%", stroke="#86d0c2", class="graph__fill graph__fill--mongo", transform="rotate(-90 55 55)")
+              span.graphs__text Mongo.db
+          h2.section-title.section-title--abilities Workflow
+          .graphs
+            .graph
+              svg(width="110", height="110", class="graph__svg")
+                circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+                circle(r="45", cx="50%", cy="50%", stroke="#10c1a8", class="graph__fill graph__fill--git", transform="rotate(-90 55 55)")
+              span.graphs__text Git
+            .graph
+              svg(width="110", height="110", class="graph__svg")
+                circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+                circle(r="45", cx="50%", cy="50%", stroke="#10c1a8", class="graph__fill graph__fill--gulp", transform="rotate(-90 55 55)")
+              span.graphs__text Gulp
+            .graph
+              svg(width="110", height="110", class="graph__svg")
+                circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
+                circle(r="45", cx="50%", cy="50%", stroke="#10c1a8", class="graph__fill graph__fill--bower", transform="rotate(-90 55 55)")
+              span.graphs__text Bower
+   section.map
+    .map-section#map
+    .contacts
+     h3.contacts__heading контакты
+     ul.contacts__list
+            li.contacts__item
+              include ../icons/skype.svg
+              span.contacts__text vsebydetkaknado
+            li.contacts__item
+              include ../icons/envelope2.svg
+              span.contacts__text vsebydetkaknado@gmail.com
+            li.contacts__item
+              include ../icons/phone2.svg
+              span.contacts__text +7 953 172 51 08
+            li.contacts__item
+              include ../icons/map_marker.svg
+              span.contacts__text Санкт-Петербург
+  include common/_footer
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_7umeeXFKJy0XukfBuBJT5PtOvGZ8Rxk&callback=initMap",async defer)

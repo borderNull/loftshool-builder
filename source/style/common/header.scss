@@ -57,7 +57,22 @@
     min-width: 30px;
     height: 100%;
     font-size: 0;
+    &.vk {
+        width: 30px;
+    height: 17px;
+    }
+    &.git {
+        width: 26px;
+        height: 22px;
+    }
+    &.in {
+        width: 24px;
+        height: 27px;
+    }
 }
+
+
+
 
 .social__list_header
 {
@@ -213,6 +228,17 @@
 	background: url(../img/blog_header.png) center bottom no-repeat;
     width: 400px;
 
+}
+
+.author__section_portfolio {
+    text-align: center;
+    background: url(../img/portfolio_header.png) top no-repeat;
+    width: 100%;
+    & h1 {
+        font-family: 'BERNIERRegular-Regular';
+    font-size: 63px;
+    color:#fff;
+    }
 }
 
 .author__section h1 {
