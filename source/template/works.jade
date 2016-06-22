@@ -6,17 +6,45 @@ html
   h2.works__title._logo
    span.works__title_words Мои работы
   section.slider__section
-   .slider__descr_section
-   .slider__show_section
+   .description
+    .description__block
+      h3.description__heading 
+       span.description__heading-styling сайт школы онлайн образования
+      .description__text Css, Javascript, Html
+      a.description__link Перейти на сайт 
+   .visual
+    .visual__main-wrap
+      img.visual-img
+    .visual__switch-section
+     .visual__previous
+      img.img-disable
+     .visual__next
+      img.img-disable    
   section.about-me
-   .container
-    .about-me__logo
-     h2.about-me__heading Что обо мне говорят
-    .about-me__wrapper
+     h2.about-me__heading 
+      span.about-me__heading-style Что обо мне говорят
      .about-me__reviews
-       p sajdhaskdhksajhdjahd
-      .about-me__first-review
+      .about-me__reviews-section
+        .about-me__first-review
+          .about-me__review-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+          .about-me__img-section
+            .about-me__img
+          .about-me__signature
+            .about-me__signature-name
+            .about-me__signature-info
       .about-me__second-review
-     .about-me__contact-form 
+          .about-me__review-text
+          .about-me__img-section
+            .about-me__img
+          .about-me__signature
+            .about-me__signature-name
+            .about-me__signature-info
+      .about-me__contact-section
+        h3.contact__heading
+        form(action="contact-me__form")
+          input(type="text",name="name",placeholder="Имя").contact-me__input._name
+          input(type="text",name="email",placeholder="Email").contact-me__input._email
+          textarea(name="txtarea",placeholder="Ваше сообщение").contact-me__input.__textarea
+       p sajdhaskdhksajhdjahd
 
   include common/_footer   
