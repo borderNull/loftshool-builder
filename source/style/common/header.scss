@@ -124,7 +124,9 @@
     padding: 0;
     z-index: 100;
 }
-
+.nav__btn_active + .nav {
+    visibility: visible;
+}
 
 .nav:before, .nav:after {
     content: '';

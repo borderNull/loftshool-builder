@@ -1,3 +1,10 @@
+.triangle--left.works{
+    fill:#FAF8F0;
+}
+
+.triangle--right.works {
+    fill:#FAF8F0;
+}
 .works__title {
     margin: 0;
     padding: 70px 0;
@@ -80,8 +87,8 @@ display: inline-block;
 }
 
 .description__link {
-	    display: inline-block;
-    
+	       display: inline-block;
+    background: #00bfa5 ;
     background-size: 19px 19px;
     color: #fff;
     border-radius: 5px;
@@ -90,7 +97,11 @@ display: inline-block;
     font: 16px/45px 'Roboto-Medium', Helvetica, Arial;
     -webkit-transition: opacity ease-in .2s;
     transition: opacity ease-in .2s;
+    &:hover {
+    	opacity: 0.5;
+    }
 }
+
 
 .visual {
 	height: 100%;
@@ -177,7 +188,7 @@ display: inline-block;
 	    margin: 0 -40px 0 0;
 }
 
-.about-me__first-review {
+.about-me__review {
 	display: inline-block;
     margin: 0 40px 40px 0;
     padding: 60px 0 0;
@@ -191,4 +202,101 @@ display: inline-block;
 
 .about-me__review-text {
 	    margin: 0 0 30px;
+}
+
+
+.about-me__img  {
+    vertical-align: middle;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 0 20px 0 0;
+    background-size: cover;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat; }
+
+.about-me__signature{
+    vertical-align: middle;
+    display: inline-block;
+    width: 260px;
+    color: #20b5a1;
+    font: 16px/1 'Roboto';
+}
+    
+.about-me__signature-name {
+	margin: 0 0 15px;
+    font-weight: 700;
+}
+
+.about-me__signature-info {
+
+}
+.about-me__contact-section{
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    padding: 35px 20px 45px;
+    box-sizing: border-box;
+    margin: auto;
+    width: 380px;
+    min-height: 440px;
+    border-radius: 3px;
+    background: url('../img/bg-blur.png') 55% 65% no-repeat;
+    background-size: 1800px 1333px;}
+
+.contact__heading {
+	    margin: 0 0 38px;
+    text-align: center;
+    font: 35px/1 'BERNIERRegular-Regular', Helvetica, Arial;
+    color: #455a64;
+}
+
+.contact-me__input {
+    padding: 17px 20px;
+    margin: 0 0 15px;
+    display: block;
+    background: #fff;
+    width: 337px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    font: 16px/1 'Roboto-Regular', Helvetica, Arial;
+    color: #373e42;
+}
+
+.contact-me__input.__textarea {
+    height: 140px;
+    resize: none;
+}
+
+.contact-me__btns {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+}
+
+.contact-me__btn {
+
+    flex: 1;
+    outline: none;
+    color: #fff;
+    background-color: #268b8b;
+    font: 16px/45px 'Roboto-Regular', Helvetica, Arial;
+    text-decoration: none;
+    text-align: center;
+  
+    transition: background ease-in .2s;
+    &:hover {
+
+    background: #26bbaa;
+
+    }
+}
+.contact-me__btn:first-child {
+    box-sizing: border-box;
+    border-right: solid 1px #82cfc9;
 }

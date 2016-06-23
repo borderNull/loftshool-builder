@@ -11,7 +11,7 @@ html
       h3.description__heading 
        span.description__heading-styling сайт школы онлайн образования
       .description__text Css, Javascript, Html
-      a.description__link Перейти на сайт 
+      a.description__link(href="#") Перейти на сайт 
    .visual
     .visual__main-wrap
       img.visual-img
@@ -25,26 +25,28 @@ html
       span.about-me__heading-style Что обо мне говорят
      .about-me__reviews
       .about-me__reviews-section
-        .about-me__first-review
+        .about-me__review
+          .about-me__review-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+          .about-me__img-section
+            .about-me__img
+           .about-me__signature
+            .about-me__signature-name Ковальчук Дмитрий
+            .about-me__signature-info Основатель школы LoftSchool
+         .about-me__review
           .about-me__review-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
           .about-me__img-section
             .about-me__img
           .about-me__signature
-            .about-me__signature-name
-            .about-me__signature-info
-      .about-me__second-review
-          .about-me__review-text
-          .about-me__img-section
-            .about-me__img
-          .about-me__signature
-            .about-me__signature-name
-            .about-me__signature-info
+            .about-me__signature-name Зар Захаров
+            .about-me__signature-info Главный преподаватель курса
       .about-me__contact-section
-        h3.contact__heading
+        h3.contact__heading Связаться со мной
         form(action="contact-me__form")
           input(type="text",name="name",placeholder="Имя").contact-me__input._name
           input(type="text",name="email",placeholder="Email").contact-me__input._email
           textarea(name="txtarea",placeholder="Ваше сообщение").contact-me__input.__textarea
-       p sajdhaskdhksajhdjahd
+         .contact-me__btns
+          a.contact-me__btn(href="#") Отправить
+          a.contact-me__btn(href="#") Очистить
 
   include common/_footer   
