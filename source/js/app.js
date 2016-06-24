@@ -9,7 +9,7 @@
           $('.button').css({'opacity':0,'visibility':'hidden'});
       });
       $(document).on('click', function (e) {
-          if ($(e.target).is('#good,#form,#sub,radio-1,radio-2,check, .button') === false) {
+          if ($(e.target).is('#good, .button') === false) {
               $('#fl').removeClass('flip');
               $('.button').css({'opacity':1,'visibility':'visible'});
           }
@@ -23,6 +23,16 @@ var parallax = new Parallax(scene);
 
 });
 
+//----------------------Navigation click function--------------------//
+
+$('#nav__btn').on('click', function (e) {
+
+if($('#nav__btn').hasClass('active')) {
+    $(this).removeClass('active');
+} else { $(this).addClass('active');}
+
+});
+//-------------------------- MAP STYLES ----------------------------//
 
 function initMap() {
   var myLatLng = {lat:59.974181, lng:30.321228};

@@ -303,40 +303,44 @@ label[for="radio-1"] {
   position: absolute;
   left: 0;
   bottom: 0;
+  right: 0;
   font-family: 'robotomedium',sans-serif;
+  display: flex;
 }
 
-.submit__form {
+.submit__form_link {
 
-  list-style: none;
-  display: inline-block;
-  padding: 0;
- 
-  & a {
-    text-decoration: none;
+
+flex:1;
+text-decoration: none;
 color: #fff;
 background-color: #13b6a1;
-padding: 12px 1px;
-  }
-  & a:hover {
+outline: none;
+text-align: center;
+font: 16px/45px 'Roboto-Regular', Helvetica, Arial;
+transition: background ease-in .2s;
+
+&.first {
+  border-right: 1px solid #fff;
+  border-bottom-left-radius: 5px;
+}
+
+// -webkit-box-flex: 1;
+//     -webkit-flex: 1;
+//     -ms-flex: 1;
+//     flex: 1;
+//     outline: none;
+//     color: #fff;
+//     background-color: #268b8b;
+//     font: 16px/45px 'Roboto-Regular', Helvetica, Arial;
+//     text-decoration: none;
+//     text-align: center;
+//     -webkit-transition: background ease-in .2s;
+//     transition: background ease-in .2s;
+  &:hover {
     background-color: #088c85;
   }
-  & a {
-    width: 190px;
-    padding: 13px 63px;
-    margin-left: -2px;
-  }
-  & a.first {
-    border-bottom-left-radius: 5px;
-  }
-  & a.last {
+  &.last {
     border-bottom-right-radius: 5px;
   }
-}
-
-.list__item__submit {
-
-}
-.submit__form_link {
-  padding: 12px 1px;
 }
