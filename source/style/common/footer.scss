@@ -36,7 +36,7 @@ a.upper__section--link {
 	padding: 0 10px;
 	}
 
-.botom__section {
+.bottom__section {
 	height: 68px;
 }	
 .bottom__descr {
@@ -63,4 +63,37 @@ a.upper__section--link {
 
 .bottom__copyright {
 	float: right;
+}
+
+@media screen and(max-width:1039px) {
+	.upper__section {
+		height:120px;
+
+	}
+	.bottom__navigation {
+		text-align:center;
+	}
+	.social__links {
+		margin:20px 0;
+		position:inherit;
+		top:0;
+		text-align:center;
+	}
+	hr {
+		margin:10px 0;
+	}
+	.bottom__section {
+		height:116px;
+	}
+	.bottom__descr--p {
+		text-align:center;
+		width:703px;
+	}
+	.bottom__copyright {
+		float:none;
+	}
+	.bottom__descr--p--right {
+		margin:19px 10px;
+		text-align:center;
+	}
 }

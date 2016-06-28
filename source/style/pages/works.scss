@@ -114,6 +114,7 @@ display: inline-block;
     background-size: 535.8333px 346.6667px;
     background-position: center;
     background-repeat: no-repeat;
+    background-image: url("/assets/img/portfolio_img.png");
 }
 
 .visual__switch-section {
@@ -130,6 +131,22 @@ display: inline-block;
     background-position: center;
     background-repeat: no-repeat;
     transition: opacity ease-in .3s;
+    background-image: url("/assets/img/portfolio-left.jpg");
+      &:after {
+    content: '';
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, .5) url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.o…1.4%200l2.6%202.6c.4.4.4%201%200%201.4l-11.6%2011.6z%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+    background-size: 25px 16px;
+    cursor: pointer;
+    }
+    &:hover {
+        opacity:0.5;
+    }
 }
 
 .visual__next {
@@ -140,6 +157,22 @@ display: inline-block;
     background-position: center;
     background-repeat: no-repeat;
     transition: opacity ease-in .3s;
+    background-image: url("/assets/img/portfolio-right.jpg");
+      &:after {
+    content: '';
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, .5) url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.o…1.4%200l2.6%202.6c.4.4.4%201%200%201.4l-11.6%2011.6z%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+    background-size: 25px 16px;
+    cursor: pointer;
+    }
+ &:hover {
+        opacity:0.5;
+    }
 }
 
 .about-me {
@@ -194,7 +227,7 @@ display: inline-block;
     padding: 60px 0 0;
     width: 370px;
     min-height: 225px;
-    background: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.o…5.321-28.168-15.978-38.832z%22%20fill%3D%22%23D4D7D8%22%2F%3E%3C%2Fsvg%3E') left top no-repeat;
+    background: url('../img/quote.png') left top no-repeat;
     background-size: 30px;
     color: #455a64;
     font: 16px/22px 'Roboto-Regular', Helvetica, Arial, sans-serif;
@@ -205,7 +238,7 @@ display: inline-block;
 }
 
 
-.about-me__img  {
+.about-me__dima  {
     vertical-align: middle;
     display: inline-block;
     width: 80px;
@@ -213,9 +246,22 @@ display: inline-block;
     margin: 0 20px 0 0;
     background-size: cover;
     border-radius: 50%;
+    background-image: url('../img/kov.png');
     background-position: center;
-    background-repeat: no-repeat; }
-
+    background-repeat: no-repeat;
+    }
+.about-me__zar {
+      vertical-align: middle;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 0 20px 0 0;
+    background-size: cover;
+    border-radius: 50%;
+    background-image: url('../img/zar.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .about-me__signature{
     vertical-align: middle;
     display: inline-block;
@@ -299,4 +345,29 @@ display: inline-block;
 .contact-me__btn:first-child {
     box-sizing: border-box;
     border-right: solid 1px #82cfc9;
+}
+
+@media screen and(max-width:877px) {
+    .triangle {
+        height:150px;
+       bottom:-1px;
+    }
+.slider__section {
+flex-direction:column;
+}
+    .about-me__reviews {
+        width:731px;
+    }
+.about-me__review {
+    margin: 0 2px 40px 0;
+}
+.about-me__reviews-section {
+    margin: 0 -19px 0 0;
+}
+    .about-me__contact-section {
+        width:355px;
+    }
+    .contact-me__input{
+        width:313px;
+    }
 }

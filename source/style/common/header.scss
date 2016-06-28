@@ -102,9 +102,6 @@
     width: 100vw;
     height: 100vh;
     min-height: 650px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     visibility: hidden;
     -webkit-box-orient: vertical;
@@ -123,8 +120,9 @@
     margin: 0;
     padding: 0;
     z-index: 100;
+    color: #fff;
 }
-.nav__btn_active + .nav {
+.active + .nav {
     visibility: visible;
 }
 
@@ -135,18 +133,25 @@
     top: 0;
     width: 50%;
     height: 100%;
-    background-color: rgba(108, 156, 90, 0.87);
+    background-color: #32C8B4;
+    opacity: 0.9;
     z-index: -1;
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
-
+.active + .nav:before {
+    left: 0;
+}
 .nav:before {
     left: -50%;
 }
 
-
-
+.active + .nav:after {
+    right: 0;
+}
+.nav:after {
+    right: -50%;
+}
 .nav__item {
     position: relative;
     text-align: center;
@@ -161,6 +166,14 @@
     margin-left: 0;
     margin-bottom: 0.79365em;
 }
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'BERNIERRegular-Regular',sans-serif;
+  
+}
+
 .nav__btn svg {
     fill: #fff;
     overflow: visible;
