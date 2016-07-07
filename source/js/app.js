@@ -17,21 +17,80 @@
 
   });
 
- $(document).ready(function () {
-var scene = document.getElementById('scene');
-var parallax = new Parallax(scene);
 
-});
+//-----------------------Parallax Scroll------------------------------//
 
+// $(document).scroll(function() {
+
+// var wScroll = $(window).scrollTop();
+
+// (function(){
+
+// var 
+//     bg = $('.bg_image'),
+//     sectionText = $('.author__section-img'),
+//     user = $('.author__section_portfolio');
+    
+
+//    slideIt(bg, wScroll / 45);
+//    slideIt(sectionText, wScroll / 30);
+//    slideIt(user, wScroll / 3);
+
+//     function slideIt(block, strafeAmount) {
+//     var strafe = -strafeAmount + '%',
+//     transformString = 'translate3d(0,' + strafe + ',0)';
+
+//  block.css({
+
+//         'transform': transformString
+//     });
+//     }
+
+// }());
+
+// });
 //----------------------Navigation click function--------------------//
 
 $('#nav__btn').on('click', function (e) {
 
-if($('#nav__btn').hasClass('active')) {
+var menu = document.getElementById('#menu_burger');
+
+if($('.menu_btn').hasClass('active')) {
     $(this).removeClass('active');
-} else { $(this).addClass('active');}
+} else { 
+    $(this).toggleClass('active');
+    $('.menu_btn').toggleClass('active');
+    
+}
 
 });
+
+
+// -----------------------STICKY BLOG SECTION --------------------//
+
+// $(window).scroll(function(){
+//     var 
+//     wScroll = $(window).scrollTop(),
+//     menu = $('.blog-container .aside__list'),
+//     sidebar = $('.blog-container .wrapper__list'),
+//     stickyStart = sidebar.offset().top;
+//     if (wScroll >= stickyStart) {
+//         menu.css({
+//             top: wScroll - stickyStart + 'px'
+//         });
+//     }
+
+// });
+//----------------------------SWIPE MENU--------------------------//
+$('aside').on('click', function(){
+
+if($('aside').hasClass('active')) {
+    $(this).removeClass('active');
+} else { $(this).addClass('active')}
+
+
+});
+
 //-------------------------- MAP STYLES ----------------------------//
 
 function initMap() {

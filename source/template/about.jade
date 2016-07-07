@@ -2,13 +2,15 @@ doctype html
 html
   include common/_head
   body
-   include common/_about_header
+   include common/_header
+   include common/triangle-about
    .about__wrapper
     .container-about
      .about__logo
+      //- svg
+      //-  use(xlink:href="#about_header")
       h2.about__header
        span.about__span Обо мне
-      //- include ../icons/about_header.svg
      .about__info_block
       .img-wrap
        img(src="../assets/img/test.jpg").img_section

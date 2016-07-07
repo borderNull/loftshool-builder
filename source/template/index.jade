@@ -2,28 +2,49 @@ doctype html
 html
  include common/_head
  body.body-welcome
-
-    //- ul#scene
-     //- li.layer(data-depth="0.10")
-     //-  .layer1
-     //- li.layer(data-depth="0.10")
-     //-  .layer2
-     //- li.layer(data-depth="0.10")
-     //-  .sky_layer 
-     //- li.layer(data-depth="0.10")
-     //-  .layer4
-     //- li.layer(data-depth="0.10")
-     //-  .layer5
-     //- li.layer(data-depth="0.10")
-     //-  .layer6
-     //- li.layer(data-depth="0.30")
-     //-  .layer7
-     //- li.layer(data-depth="0.10")
-     //-  .layer8
-     //- li.layer(data-depth="0.10")
-     //-  .cloud2
-     //- li.layer(data-depth="0.10")
-     //-  .cloud   	
+   .parallax-wrapper
+    ul#scene.parallax_list
+     li.layer(data-depth="0.10")
+      .layer1.layer-img
+     li.layer(data-depth="0.10")
+      .layer2.layer-img
+     li.layer(data-depth="0.10")
+      .sky_layer.layer-img
+     li.layer(data-depth="0.10")
+      .layer4.layer-img
+     li.layer(data-depth="0.10")
+      .layer5.layer-img
+     li.layer(data-depth="0.10")
+      .layer6.layer-img
+     li.layer(data-depth="0.30")
+      .layer7.layer-img
+     li.layer(data-depth="0.10")
+      .layer8.layer-img
+     li.layer(data-depth="0.10")
+      .cloud2.layer-img
+     li.layer(data-depth="0.10")
+      .cloud.layer-img
+   //- .parallax
+   //-   .layer
+   //-    img(src="../assets/img/Layer5.jpg")
+   //-   .layer
+   //-    img(src="../assets/img/Layer8.jpg")
+   //-   .layer
+   //-    img(src="../assets/img/Layer7.jpg")
+   //-   .layer
+   //-    img(src="../assets/img/cloud_PNG4.jpg")
+   //-   .layer
+   //-    img(src="../assets/img/Layer6.jpg")
+   //-   .layer
+   //-    img(src="../assets/img/Layer4.jpg")
+   //-   .layer
+   //-    img(src="../assets/img/sky.jpg")
+   //-   .layer
+   //-    img(src="../assets/img/Layer2.jpg")
+   //-   .layer
+   //-    img(src="../assets/img/Layer1.jpg")
+   //-   .layer
+   //-    img(src="../assets/img/cloud_PNG5.png")   	
   header.header__welcome
    .auth
     .button#auth Авторизоваться
@@ -42,32 +63,29 @@ html
         <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22"><path class ="icons"d="M25 17.4C23 21.6 17.3 22 13.3 22c-4.1 0-10.1-0.4-12.3-4.6C0.2 15.8 0 14 0 12.3c0-2.3 0.6-4.4 2.1-6.2C1.8 5.2 1.7 4.3 1.7 3.4 1.7 2.2 2 1.1 2.5 0c2.5 0 4 1.1 5.9 2.5C10 2.2 11.6 2 13.3 2c1.5 0 3 0.2 4.4 0.5C19.5 1 21.1 0 23.5 0c0.5 1.1 0.8 2.2 0.8 3.4 0 0.9-0.1 1.8-0.4 2.6C25.4 7.8 26 10 26 12.3 26 14 25.8 15.8 25 17.4zM18.5 10.5c-1 0-2 0.2-3 0.3C14.6 11 13.8 11 13 11s-1.6 0-2.5-0.2C9.5 10.7 8.5 10.5 7.5 10.5c-2.5 0-4 2.1-4 4.5 0 4.8 4.4 5.5 8.2 5.5h2.6c3.8 0 8.2-0.7 8.2-5.5C22.5 12.6 21 10.5 18.5 10.5zM8 18c-1.4 0-2-1.9-2-3s0.6-3 2-3 2 1.9 2 3S9.4 18 8 18zM18 18c-1.4 0-2-1.9-2-3s0.6-3 2-3 2 1.9 2 3S19.4 18 18 18z" fill="#FFF"/></svg>
        a(href="#").soc__link
         <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="24" height="23" viewBox="0 0 24 22.9"><path class="icons" d="M2.9 5.3H2.8C1.1 5.3 0 4.2 0 2.7 0 1.2 1.2 0 2.9 0c1.8 0 2.9 1.2 2.9 2.7C5.8 4.2 4.7 5.3 2.9 5.3zM5.5 22.9H0.3V7.5h5.2V22.9zM24 22.9h-5.1v-8.3c0-2.1-0.7-3.5-2.6-3.5 -1.4 0-2.3 1-2.6 1.9 -0.1 0.3-0.2 0.8-0.2 1.3v8.6H8.3c0.1-14 0-15.5 0-15.5h5.1v2.3h0c0.7-1.1 1.9-2.6 4.7-2.6 3.4 0 5.9 2.2 5.9 7V22.9z" fill="#FFF"/></svg>
-      .info
-          a(href="/works.html").about--link Мои работы
-          a(href="/about.html").about--link Обо мне
-          a(href="/blog.html").about--link Блог
+      .menu__section
+          a(href="/works.html").menu--link Мои работы
+          a(href="/about.html").menu--link Обо мне
+          a(href="/blog.html").menu--link Блог
     .page__back
-      .mainframe#good
-       .authorize#sub
-        span.right__rect-welcome
+      .mainframe
+       .authorize
         h2.back__card_heading#sub Авторизуйтесь
-        span.left__rect-welcome
-       .mainframe__login#sub
        form.login__form#form
-         .login__img#sub
-         input(type="text" placeholder="Логин").login__input#sub
+         .login__img
+         input(type="text" placeholder="Логин").login__input
          .pass__img
-         input(type="text" placeholder="Пароль").password__input#sub
+         input(type="text" placeholder="Пароль").password__input
         .mainframe__check
          input(type="checkbox" name="check" id="check").checkbox
          label(for="check") Я человек
-        .mainframe__radio#sub
-         p.check__question#sub Вы точно не робот?
+        .mainframe__radio
+         p.check__question Вы точно не робот?
          input(type="radio" name="radio" id="radio-1" ).radio
-         label(for="radio-1")#sub Да
+         label(for="radio-1") Да
          input(type="radio" name="radio" id="radio-2" ).radio
          label(for="radio-2") Не уверен
-        .info__login#sub
-           a(href="#").submit__form_link.first#sub На главную
-           a(href="#").submit__form_link.last#sub Войти
+        .menu__login_section
+           a(href="#").submit__form_link.first#back На главную
+           a(href="#").submit__form_link.last#submit Войти
   footer.footer-welcome &copy Бутин Максим | создано с любовью в LoftSchool | 2016

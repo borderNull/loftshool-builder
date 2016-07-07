@@ -1,20 +1,18 @@
 .front__page_heading{
-	font-family: 'robotomedium',sans-serif;
-   font-size: 28px;
+	font: 28px/1 'robotomedium',sans-serif, Arial;
    color: #455a64;
-   margin: 9px 0 3px 0;
+   margin: 0 0 3px 0;
 }
 .front__page_text {
-	font-family: 'robotoregular';
-	font-size: 18px;
+	font: 18px/1'robotoregular', sans-serif,Arial;
 	color: #86949c;
-	 margin: 0 0 31px 0;
+	margin: 0 0 31px 0;
 }
 .mainframe {
 	height: 400px;
 	width: 385px;
 	background-color: #fff;
-	opacity: 0.9;
+	opacity: 0.85;
 	position: absolute;
   	top: 50%;
   	left: 50%;
@@ -25,11 +23,15 @@
 }
 
 .img__sect {
-	padding-top: 37px;
+	padding: 37px 0 0 0; 
+  margin: 0 0 9px 0;
 }
 
+.soc__link {
+  padding: 5px;
+}
 
-.info {
+.menu__section {
   display: flex;
   position: absolute;
   right: 0;
@@ -39,16 +41,14 @@
   height: 50px;
 }
 
-.about--link {
+.menu--link {
   flex: 1 0 auto;
-  color: #fff;
+    color: #fff;
     text-decoration: none;
-    font-size: 15px;
-    line-height: 50px;
-    transition: background ease-in .1s;
-background-color: #13b6a1;
-box-sizing: border-box;
-border-right: 1px solid #fff;
+    font: 15px/3 'robotolight', sans-serif;
+    background: #13b6a1;
+    border-right: 1px solid #fff;
+    transition: 1s;
 &:first-child {
   border-bottom-left-radius: 5px;
 }
@@ -58,6 +58,7 @@ border-right: 1px solid #fff;
 }
 &:hover {
   background-color: #088c85;
+  transition: 0.5s;
 }
 }
 
@@ -83,31 +84,33 @@ border-right: 1px solid #fff;
 
 
 /* ++++++++++++MAIN BACK PAGE STYLES++++++++++++++++++++++  */
-
+.authorize {
+  padding:20px 0;
+}
 .back__card_heading {
   font-family: 'BERNIERRegular-Regular',sans-serif;
   font-size: 35px;
   color: #455a64;
-  margin: 20px 0;
-}
-
-.right__rect-welcome {
-  width: 22px;
-  height: 5px;
-  background-color: #c5cbcd;
-  position: absolute;
+  margin:0;
+  &:before, &:after {
+    content:'';
+    width: 22px;
+    height: 5px;
+    background: #c5cbcd;
+    position: absolute;
+    top: 38px;
+  }
+  &:before {
     left: 51px;
-    top: 38px;
-}
+  }
 
-.left__rect-welcome {
-  width: 22px;
-  height: 5px;
-  background-color: #c5cbcd;
-  position: absolute;
+  &:after {
     right: 51px;
-    top: 38px;
+  }
 }
+ .login__form {
+  margin: 0 0 15px 0;
+ }
 
 .login__input {
   margin-left: 46px;
@@ -157,19 +160,18 @@ border-right: 1px solid #fff;
     border-bottom-left-radius: 5px;
 }
 .password__input {
-  margin-left: 46px;
-	 width: 293px;
+	  width: 293px;
     height: 46px;
-    margin-top: 5px;
-    margin-bottom: 15px; 
+    margin: 5px 0 15px 46px;
     outline: none; 
-    padding-left: 30px; 
+    padding: 0 0 0 30px; 
     font-size: 17px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border: 0;
     opacity: 1;
     box-shadow: 0px 0px 5px #cdd1da;
+  
 }
 
 .check__question {
@@ -181,10 +183,8 @@ border-right: 1px solid #fff;
 /* ============CHECKBOX AND RADIO STYLE =============== */
 
 .mainframe__check {
-  margin-top: 15px;
-  margin-bottom: 26px;
-font-family: 'robotoregular';
-font-size: 16px;
+  margin: 0 0 26px 0;
+font: 16/1 'robotoregular', sans-serif , Arial;
 }
  input[type=checkbox] {
 	display:none;
@@ -291,7 +291,7 @@ label[for="radio-1"] {
     
 }
 /* ========= BOTTOM BACK PAGE ================ */
-.info__login {
+.menu__login_section {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -306,44 +306,46 @@ label[for="radio-1"] {
 flex:1;
 text-decoration: none;
 color: #fff;
-background-color: #13b6a1;
+background: #13b6a1;
 outline: none;
 text-align: center;
 font: 16px/45px 'Roboto-Regular', Helvetica, Arial;
-transition: background ease-in .2s;
+transition: 1s;
 
 &.first {
   border-right: 1px solid #fff;
   border-bottom-left-radius: 5px;
 }
 
-// -webkit-box-flex: 1;
-//     -webkit-flex: 1;
-//     -ms-flex: 1;
-//     flex: 1;
-//     outline: none;
-//     color: #fff;
-//     background-color: #268b8b;
-//     font: 16px/45px 'Roboto-Regular', Helvetica, Arial;
-//     text-decoration: none;
-//     text-align: center;
-//     -webkit-transition: background ease-in .2s;
-//     transition: background ease-in .2s;
   &:hover {
     background-color: #088c85;
+    transition:0.5s;
   }
   &.last {
     border-bottom-right-radius: 5px;
   }
 }
 
-@media screen and(max-width: 400px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .auth {
     right: 65px;
   }
   .mainframe {
     width: 303px;
 
+.pageback {
+  width: 304px;
+}
+
+.right__rect-welcome {
+  left: 20px;
+}
+.left__rect-welcome {
+  right: 27px;
+}
+.login__input,.password__input {
+  width: 217px;
+}
   }
   .footer-welcome {
     width: 260px;

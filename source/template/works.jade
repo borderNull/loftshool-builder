@@ -2,24 +2,25 @@ doctype html
 html
  include common/_head
  body
-  include common/_works_header
+  include common/_header
+  include common/triangle-works
   h2.works__title._logo
    span.works__title_words Мои работы
   section.slider__section
-   .description
-    .description__block
-      h3.description__heading 
-       span.description__heading-styling сайт школы онлайн образования
-      .description__text Css, Javascript, Html
-      a.description__link(href="#") Перейти на сайт 
-   .visual
+   .slider__left__column
     .visual__main-wrap
-      img.visual-img
+      img.visual-img(src="/assets/img/portfolio_img.png")
+    .description__block
+      .description__title сайт школы онлайн образования
+      .description__skills Css, Javascript, Html
+      .description__btn
+       a.description__link(href="#") Перейти на сайт 
+   .slider__right__column
     .visual__switch-section
-     .visual__previous
-      img.img-disable
-     .visual__next
-      img.img-disable    
+      a.img__previous.switch__link(href="#")
+       img.img-left(src="/assets/img/portfolio-left.jpg")
+      a.img__next.switch__link(href="#")
+       img.img-right(src="/assets/img/portfolio-right.jpg")   
   section.about-me
      h2.about-me__heading 
       span.about-me__heading-style Что обо мне говорят

@@ -1,22 +1,8 @@
-// html,
-// body {
-//   height: 100%;
-// }
-
-// body {
-//   display: flex;
-//   flex-direction: column;
-
-// }
-
-// header,
-// footer {
-//   flex: 0 0 auto;
-// }
 
 .body-welcome {
-	background: url(../img/good_back.jpg);
-	background-size: cover;
+	// background: url(../img/good_back.jpg);
+	// background-size: cover;
+	min-height: 650px;
 }
 	
 .flip-container {
@@ -38,10 +24,12 @@
   border: 2px solid #fff;
   text-align: center;
   border-radius: 8px;
+  transition: 1.5s;
   color:#fff;
   &:hover {
     background-color: #fff;
-    color:#00bfa5; 
+    color:#00bfa5;
+    transition: 1.5s; 
   }
 }
 
@@ -50,68 +38,109 @@
 	position: absolute;
     left: 0;
     bottom: 0;
-    height: 100px;
+    height: 60px;
     width: 100%;
-    
-	font-size: 16px;
+	font: 16px/1 'robotolight',sans-serif;;
 	text-align: center;
-	font-family: 'robotolight',sans-serif;
 	color: #fff;
 	
 }
 
 /*============PARALLAX STYLES==================== */
- 
- ul#scene {
- 	list-style: none;
- 	padding: 0;
- 	margin: 0;
- 	height: 100%;
- 	width: 100%;	
- }
 
-.layer {
-	opacity: 0,8;
-    padding: 0;
-    margin: 0;
+.parallax {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+ 
+ .parallax-wrapper {
+    position: absolute;
+    overflow: hidden;
+    display: block;
+    width: 100%;
     height: 100%;
- 	width: 100%;
-    
+    top: 0;
+    left: 0;
+    min-height: 650px;
 }
 
+.parallax__list {
+	    position: relative;
+    transform: translate3d(0px, 0px, 0px);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+#scene, .layer {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.layer .layer-img {
+	webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    width: 140%;
+    height: 120%;
+    left: -20%;
+    top: -10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 40%;
+}
+
+.layer img {
+	display: block;
+	position: absolute;
+	bottom: 0;
+}
 .layer1{
-	background: url('../img/Layer 1.jpg');
+	background: url('../img/Layer5.jpg');
 }
 
 .layer2 {
-	background: url('../img/Layer 2.jpg');
+	background: url('../img/Layer8.jpg');
 }
 
 .sky_layer {
-	background:url('..img/sky.jpg');
+	background:url('..img/Layer7.jpg');
 }
 
 .layer4 {
-	background: url('../img/Layer 4.jpg');
+	background: url('../img/cloud_PNG4.jpg');
 }
 
 .layer5 {
-	background:url('../img/Layer 5.jpg');
+	background:url('../img/Layer6.jpg');
 }
 
 .layer6 {
-	background:url('../img/Layer 6.jpg');
+	background:url('../img/Layer4.jpg');
 }
 .layer7 {
-	background:url('../img/Layer 7.jpg');
+	background:url('../img/sky.jpg');
 	
 }
 .layer8 {
-	background:url('../img/Layer 8.jpg');
+	background:url('../img/Layer2.jpg');
 
 }
 .cloud {
-	background:url('../img/cloud_PNG4.jpg');
+	background:url('../img/Layer1.jpg');
 }
 .cloud2 {
 	background:url('../img/cloud_PNG5.jpg');

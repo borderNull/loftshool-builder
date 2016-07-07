@@ -19,9 +19,19 @@
   background-color: #efeee9;
 }
 
+.sprite-section {
+  display: none;
+}
 
+#about_header {
+  opacity: 0.1;
+}
 
-
+svg #vk {
+  width: 26px;
+  height: 22px;
+  fill: #fff;
+}
 
 .about__header {
   background: url(../img/about_header.svg)center no-repeat;
@@ -77,7 +87,7 @@
 .about__descr {
   font-family: 'regular';
   font-size: 16px;
-  margin-bottom: 15px;
+  margin: 0 0 15px 0;
   text-align: left;
 }
 .header_about {
@@ -137,8 +147,8 @@
 
 
 .skills__describe {
-  font-family: 'robotoregular';
-  font-size: 16px;
+  font: 16px/1 'robotoregular',sans-serif,Arial;
+ 
   color:#455a64;
 }
 
@@ -272,7 +282,7 @@ position: relative;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   width: 395px;
-  height: 293px;
+  min-height: 293px;
   min-width: 320px;
   background: rgba(244,245,240,.85);
   padding: 0 40px;
@@ -284,28 +294,29 @@ position: relative;
 
 .contacts__heading {
   text-align: center;
-  font-family: 'BERNIERRegular-Regular', Helvetica, Arial ;
-  font-size: 35px;
+  font: 35px/1 'BERNIERRegular-Regular', Helvetica, Arial ;
   position: relative;
-  &:before {
-    top: 15px;
-    left: 47px;
-    position: absolute;
-}
+  margin: 0;
+  padding: 1em 0;
 
-&:after {
-    top: 15px;
-    right: 47px;
-    position: absolute;
-}
-
-&:before,&:after {
-      display: block;
+  &:before,&:after {
+    display: block;
     content: '';
     width: 20px;
     height: 5px;
     background: #c9c8c0;
+    top: 50px;
+    position: absolute;
 }
+  &:before {
+    left: 47px;
+}
+
+&:after {
+    right: 47px;   
+}
+
+
 }
 
 .contacts__list {
@@ -335,4 +346,173 @@ position: relative;
 
 .contacts__text {
   margin-left: 10px;
+}
+
+
+@media (min-width: 1200px) and (max-width: 1799px) {
+  .about__header {
+    top: -101px;
+    left: 197px;
+  }
+  .about__info_block {
+    padding:0;
+    margin: 100px 0 0 0;
+  }
+  .about__heading:before {
+left: 280px;
+  }
+
+  .about__heading:after{ 
+    right:280px;}
+  .about__descr {
+    width: 427px;
+    padding: 0 51px 11px 0;
+    margin: 0 auto;
+    text-align: left;
+    &:last-child {
+      width: 430px;
+      padding: 0 51px 40px 0;
+    }
+  }
+
+  .graph {
+    margin: 0 20px 20px 0;
+  }
+  
+}
+
+@media (min-width:768px) and (max-width: 1199px) {
+
+  .triangle {
+    height: 150px;
+  }
+
+  .triangle--right {
+    fill: #efeee9;
+  }
+
+  .about__wrapper {
+    flex-direction: column;
+  }
+  .about__header {
+    top: -65px;
+    left: 34%;
+    width: 250px;
+  }
+
+  .about__info_block {
+    padding:0;
+    margin: 100px 0 0 0;
+  }
+.about__heading {
+  margin:15px 0;
+  &:before {
+    left: 300px;
+  }
+  &:after {
+    right: 300px;
+  }
+}
+  .about__descr {
+    width: 500px;
+    padding: 0 51px 25px 30px;
+    margin: 0 auto;
+    &:last-child {
+      padding: 0 51px 44px 30px;
+    }
+  }
+ .container-skills {
+  margin:0;
+ }
+
+ .skills__heading {
+  margin: 50px auto 35px;
+ }
+ .skills__describe {
+  width: 500px;
+  margin:0 auto;
+ }
+ .skills_rounds {
+  text-align: center;
+ }
+ .graphs:last-child {
+  margin: 0 0 30px 0;
+ }
+ .graph {
+      margin: 0 20px 20px 0;
+ }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .triangle {
+    height: 63px;
+    bottom: 0;
+  }
+
+  .triangle--right {
+    fill: #efeee9;
+  }
+
+  .about__wrapper {
+    flex-direction: column;
+  }
+  .about__header {
+    top: -57px;
+    left: 17%;
+    width: 200px;
+  }
+
+  .about__info_block {
+    padding:0;
+    margin: 100px 0 0 0;
+  }
+.about__heading {
+  margin:15px 0;
+  &:before {
+    left: 100px;
+  }
+  &:after {
+    right: 100px;
+  }
+}
+  .about__descr {
+    width: 311px;
+    padding: 0 0 20px 0;
+    margin: 0 auto;
+    &:last-child {
+      padding: 0 0 30px 0;
+    }
+  }
+ .container-skills {
+  margin:0;
+  padding:0;
+ }
+
+ .skills__heading {
+  margin: 30px auto 20px;
+ }
+ .skills__describe {
+  width: 300px;
+  margin:0 auto;
+ }
+ .skills_rounds {
+  text-align: center;
+ }
+ .graphs:last-child {
+  margin: 0 0 30px 0;
+ }
+ .graph {
+      margin: 0 20px 20px 0;
+ }
+ .contacts {
+  padding:0;
+  width:100%;
+  top:0;
+  left:0;
+  transform:none;
+  background: rgba(244, 245, 240, 1);
+ }
+ .contacts__item {
+  margin-left: 10px;
+ }
 }
