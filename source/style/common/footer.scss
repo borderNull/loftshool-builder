@@ -1,13 +1,15 @@
 /* ===========FOOTER STYLES ========== */
 
-
+.footer__works {
+	background: #2f4247;
+}
 .footer {
 	background: #555b5e;
 	
 }
 .upper__section {
-	
-	height: 74px;
+	border-bottom: 1px solid rgba(255,255,255, 0.1);
+	height: 75px;
 	position: relative;
 }
 
@@ -26,9 +28,25 @@ a.upper__section--link {
 
 .social__links {
 	position: absolute;
-	right: 0;
-	top: 10px;
+	right: 50px;
+	top: 17px;
 	
+
+}
+
+.vk_round {
+    width: 35px;
+	height: 40px;
+}
+
+.git_round {
+	width: 35px;
+	height: 40px;
+}
+
+.linkedin_round {
+	width: 35px;
+	height: 40px;
 
 }
 
@@ -37,7 +55,7 @@ a.upper__section--link {
 	}
 
 .bottom__section {
-	height: 68px;
+	height: 75px;
 }	
 .bottom__descr {
 	display: inline-block;
@@ -63,9 +81,6 @@ a.upper__section--link {
 
 .bottom__copyright {
 	float: right;
-}
-hr{
-	opacity: 0.1;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {

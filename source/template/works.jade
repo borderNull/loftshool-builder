@@ -4,17 +4,30 @@ html
  body
   include common/_header
   include common/triangle-works
-  h2.works__title._logo
-   span.works__title_words Мои работы
+  .works__header_title
+   h2.works__title Мои работы
+   svg.works__title_logo
+      use(xlink:href="#works_header")
   section.slider__section
    .slider__left__column
-    .visual__main-wrap
-      img.visual-img(src="/assets/img/portfolio_img.png")
+    .slider
+        .slider__display
+          ul.slider__list
+            li.slider__item.active
+             img.visual-img(src="/assets/img/portfolio_img.png")
+            li.slider__item
+             img.visual-img(src="/assets/img/slider2.jpg")
+            li.slider__item
+             img.visual-img(src="/assets/img/slider3.jpg")
+            li.slider__item
+             img.visual-img(src="/assets/img/slider4.jpg")
     .description__block
       .description__title сайт школы онлайн образования
       .description__skills Css, Javascript, Html
       .description__btn
        a.description__link(href="#") Перейти на сайт 
+        svg.link__img
+         use(xlink:href='#link') 
    .slider__right__column
     .visual__switch-section
       a.img__previous.switch__link(href="#")
@@ -22,8 +35,10 @@ html
       a.img__next.switch__link(href="#")
        img.img-right(src="/assets/img/portfolio-right.jpg")   
   section.about-me
-     h2.about-me__heading 
-      span.about-me__heading-style Что обо мне говорят
+     .about-me__header
+      h2.about-me__heading Что обо мне говорят
+       svg.about_header-img
+        use(xlink:href="#about_header")
      .about-me__reviews
       .about-me__reviews-section
         .about-me__review
@@ -49,5 +64,8 @@ html
          .contact-me__btns
           a.contact-me__btn(href="#") Отправить
           a.contact-me__btn(href="#") Очистить
+     svg.arrow-up
+      use(xlink:href="#arrow_down")
 
-  include common/_footer   
+
+  include common/footer__works   

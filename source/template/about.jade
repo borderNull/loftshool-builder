@@ -6,11 +6,10 @@ html
    include common/triangle-about
    .about__wrapper
     .container-about
-     .about__logo
-      //- svg
-      //-  use(xlink:href="#about_header")
-      h2.about__header
-       span.about__span Обо мне
+     .about__logo_section
+      h2.about__header Обо мне
+      svg.about__header_logo
+       use(xlink:href="#about_header")
      .about__info_block
       .img-wrap
        img(src="../assets/img/test.jpg").img_section
@@ -42,24 +41,24 @@ html
           h2.section-title.section-title--abilities Backend
           .graphs
             .graph
-              svg(width="110", height="110", class="graph__svg")
+              svg(width="110", height="110", class="graph__svg" id="test")
                 circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
-                circle(r="45", cx="50%", cy="50%", stroke="#86d0c2", class="graph__fill graph__fill--php", transform="rotate(-90 55 55)")
+                circle(r="45", cx="50%", cy="50%", stroke="#10c1a8", class="graph__fill graph__fill--php", transform="rotate(-90 55 55)")
               span.graphs__text PHP
             .graph
-              svg(width="110", height="110", class="graph__svg")
+              svg(width="110", height="110", class="graph__svg" id="test")
                 circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
-                circle(r="45", cx="50%", cy="50%", stroke="#86d0c2", class="graph__fill graph__fill--mysql", transform="rotate(-90 55 55)")
+                circle(r="45", cx="50%", cy="50%", stroke="#10c1a8", class="graph__fill graph__fill--mysql", transform="rotate(-90 55 55)")
               span.graphs__text mySQL
             .graph
-              svg(width="110", height="110", class="graph__svg")
+              svg(width="110", height="110", class="graph__svg" id="test")
                 circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
-                circle(r="45", cx="50%", cy="50%", stroke="#86d0c2", class="graph__fill graph__fill--node", transform="rotate(-90 55 55)")
+                circle(r="45", cx="50%", cy="50%", stroke="#10c1a8", class="graph__fill graph__fill--node", transform="rotate(-90 55 55)")
               span.graphs__text Node.js & npm
             .graph
               svg(width="110", height="110", class="graph__svg")
                 circle(r="45", cx="50%", cy="50%", stroke="#ccc", fill="none")
-                circle(r="45", cx="50%", cy="50%", stroke="#86d0c2", class="graph__fill graph__fill--mongo", transform="rotate(-90 55 55)")
+                circle(r="45", cx="50%", cy="50%", stroke="#10c1a8", class="graph__fill graph__fill--mongo", transform="rotate(-90 55 55)")
               span.graphs__text Mongo.db
           h2.section-title.section-title--abilities Workflow
           .graphs

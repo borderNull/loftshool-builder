@@ -1,7 +1,6 @@
 
 .body-welcome {
-	// background: url(../img/good_back.jpg);
-	// background-size: cover;
+ 
 	min-height: 650px;
 }
 	
@@ -48,19 +47,10 @@
 
 /*============PARALLAX STYLES==================== */
 
-.parallax {
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	overflow: hidden;
-	height: 100%;
-	width: 100%;
-}
+
  
  .parallax-wrapper {
-    position: absolute;
+position: absolute;
     overflow: hidden;
     display: block;
     width: 100%;
@@ -70,13 +60,10 @@
     min-height: 650px;
 }
 
-.parallax__list {
-	    position: relative;
-    transform: translate3d(0px, 0px, 0px);
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
+#scene {
+    position: relative;
+    overflow: hidden;
 }
-
 #scene, .layer {
     display: block;
     height: 100%;
@@ -87,11 +74,9 @@
 }
 
 .layer .layer-img {
-	webkit-transform: translate3d(0, 0, 0);
+
     transform: translate3d(0, 0, 0);
-    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     width: 140%;
@@ -102,48 +87,76 @@
     background-size: cover;
     background-position: center 40%;
 }
+// .parallax__list {
+// 	overflow: hidden;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+// }
 
-.layer img {
-	display: block;
-	position: absolute;
-	bottom: 0;
+// .parallax {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   left: 0;
+//   bottom: 0;
+//   overflow: hidden;
+//   height: 100%;
+//   width: 100%;
+// }
+
+// .layer  {
+//     position: absolute;
+//   width: 1920px;
+//   height: 100%;
+//   left: 50%;
+//   margin-left: -960px;
+//   bottom: 0%;
+// }
+
+// .layer img {
+// 	display: block;
+//   position: absolute;
+//   bottom: 0;
+// }
+.layer0{
+	background: url('../img/layer_0.png');
 }
-.layer1{
-	background: url('../img/Layer5.jpg');
+
+.layer1 {
+	background: url('../img/layer_1.png');
 }
 
 .layer2 {
-	background: url('../img/Layer8.jpg');
+	background:url('../img/layer_2.png');
 }
 
-.sky_layer {
-	background:url('..img/Layer7.jpg');
+.layer3 {
+	background: url('../img/layer_3.png');
 }
 
 .layer4 {
-	background: url('../img/cloud_PNG4.jpg');
+	background:url('../img/layer_4.png');
 }
 
 .layer5 {
-	background:url('../img/Layer6.jpg');
+	background:url('../img/layer_5.png');
 }
-
 .layer6 {
-	background:url('../img/Layer4.jpg');
-}
-.layer7 {
-	background:url('../img/sky.jpg');
+	background:url('../img/layer_6.png');
 	
 }
-.layer8 {
-	background:url('../img/Layer2.jpg');
+.layer7 {
+	background:url('../img/layer_7.png');
 
 }
-.cloud {
-	background:url('../img/Layer1.jpg');
+.layer8{
+	background:url('../img/layer_8.png');
 }
-.cloud2 {
-	background:url('../img/cloud_PNG5.jpg');
+.layer9 {
+	background:url('../img/layer_9.png');
 }
 
 
