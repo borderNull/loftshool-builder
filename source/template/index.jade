@@ -23,28 +23,7 @@ html
      li.layer(data-depth="0.8")
       .layer8.layer-img
      li.layer(data-depth="0.9")
-      .layer9.layer-img
-   //- .parallax
-   //-   .layer
-   //-    img(src="../assets/img/layer_0.png")
-   //-   .layer
-   //-    img(src="../assets/img/layer_1.png")
-   //-   .layer
-   //-    img(src="../assets/img/layer_2.png")
-   //-   .layer
-   //-    img(src="../assets/img/layer_3.png")
-   //-   .layer
-   //-    img(src="../assets/img/layer_4.png")
-   //-   .layer
-   //-    img(src="../assets/img/layer_5.png")
-   //-   .layer
-   //-    img(src="../assets/img/layer_6.png")
-   //-   .layer
-   //-    img(src="../assets/img/layer_7.png")
-   //-   .layer
-   //-    img(src="../assets/img/layer_8.png")
-   //-   .layer
-   //-    img(src="../assets/img/layer_9.png")   	
+      .layer9.layer-img  	
   header.header__welcome
    .auth
     .button#auth Авторизоваться
@@ -71,7 +50,7 @@ html
       .mainframe
        .authorize
         h2.back__card_heading#sub Авторизуйтесь
-       form.login__form#form
+       form.login__form#form(type="POST",action="/")
          .login__img
          input(type="text" placeholder="Логин").login__input
          .pass__img

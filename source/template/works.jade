@@ -8,32 +8,66 @@ html
    h2.works__title Мои работы
    svg.works__title_logo
       use(xlink:href="#works_header")
-  section.slider__section
-   .slider__left__column
-    .slider
-        .slider__display
-          ul.slider__list
-            li.slider__item.active
-             img.visual-img(src="/assets/img/portfolio_img.png")
-            li.slider__item
-             img.visual-img(src="/assets/img/slider2.jpg")
-            li.slider__item
-             img.visual-img(src="/assets/img/slider3.jpg")
-            li.slider__item
-             img.visual-img(src="/assets/img/slider4.jpg")
-    .description__block
-      .description__title сайт школы онлайн образования
-      .description__skills Css, Javascript, Html
-      .description__btn
-       a.description__link(href="#") Перейти на сайт 
-        svg.link__img
-         use(xlink:href='#link') 
-   .slider__right__column
-    .visual__switch-section
-      a.img__previous.switch__link(href="#")
-       img.img-left(src="/assets/img/portfolio-left.jpg")
-      a.img__next.switch__link(href="#")
-       img.img-right(src="/assets/img/portfolio-right.jpg")   
+  section.slider__section#slider
+    .slider__container
+      .slider__current#slide
+       ul.slider__current-list
+        li.slider__current-item.slider__current-item--active
+          img.slider__current-image(src="/assets/img/portfolio_img.png")
+        li.slider__current-item
+          img.slider__current-image(src="/assets/img/slider2.jpg")
+        li.slider__current-item
+          img.slider__current-image(src="/assets/img/slider3.jpg")
+        li.slider__current-item
+          img.slider__current-image(src="/assets/img/slider4.jpg")
+      .slider__description#slideDescr
+        .slider__description-container
+         ul.slider__description-list
+          li.slider__description-item.slider__description-item--active
+            .slider__header Сайт первый
+            .slider__caption HTML CSS JS
+            a.slider__btn(href="#") Посмотреть сайт
+             svg.link__img
+              use(xlink:href='#link')
+          li.slider__description-item
+            .slider__header Сайт второй
+            .slider__caption CSS HTML JS
+            a.slider__btn(href="#") Посмотреть сайт
+             svg.link__img
+              use(xlink:href='#link')
+          li.slider__description-item
+            .slider__header Сайт третий
+            .slider__caption JS HTML CSS
+            a.slider__btn(href="#") Посмотреть сайт
+             svg.link__img
+              use(xlink:href='#link')
+          li.slider__description-item
+            .slider__header Сайт четвертый
+            .slider__caption JS HTML CSS
+            a.slider__btn(href="#") Посмотреть сайт
+             svg.link__img
+              use(xlink:href='#link')  
+      .slider__thumbnails       
+        .thumbnail.thumbnail--down#downBtn
+          ul.thumbnail__list
+            li.thumbnail__item
+             img.thumbnail__image(src="/assets/img/portfolio-left.jpg")
+            li.thumbnail__item
+             img.slider__current-image(src="/assets/img/slider2.jpg")
+            li.thumbnail__item
+             img.slider__current-image(src="/assets/img/slider3.jpg")
+            li.thumbnail__item.thumbnail__item--active
+             img.slider__current-image(src="/assets/img/slider4.jpg")
+        .thumbnail.thumbnail--up#upBtn
+          ul.thumbnail__list
+            li.thumbnail__item
+             img.thumbnail__image(src="/assets/img/portfolio-left.jpg")
+            li.thumbnail__item.thumbnail__item--active
+             img.slider__current-image(src="/assets/img/slider2.jpg")
+            li.thumbnail__item
+             img.slider__current-image(src="/assets/img/slider3.jpg")
+            li.thumbnail__item
+             img.slider__current-image(src="/assets/img/slider4.jpg")                  
   section.about-me
      .about-me__header
       h2.about-me__heading Что обо мне говорят
@@ -57,7 +91,7 @@ html
              .about-me__signature-info Главный преподаватель курса
       .about-me__contact-section
         h3.contact__heading Связаться со мной
-        form(action="contact-me__form")
+        form(action="contact-me__form",type="POST")
           input(type="text",name="name",placeholder="Имя").contact-me__input._name
           input(type="text",name="email",placeholder="Email").contact-me__input._email
           textarea(name="txtarea",placeholder="Ваше сообщение").contact-me__input.__textarea
@@ -65,7 +99,7 @@ html
           a.contact-me__btn(href="#") Отправить
           a.contact-me__btn(href="#") Очистить
      svg.arrow-up
-      use(xlink:href="#arrow_down")
+      use(xlink:href="#portf_arrow_up")
 
 
   include common/footer__works   

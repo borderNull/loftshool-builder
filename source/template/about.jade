@@ -83,16 +83,20 @@ html
      h3.contacts__heading контакты
      ul.contacts__list
             li.contacts__item
-              include ../icons/skype.svg
-              span.contacts__text vsebydetkaknado
+             svg.contact-icon
+              use(xlink:href='#skype')
+             span.contacts__text vsebydetkaknado
             li.contacts__item
-              include ../icons/envelope2.svg
+              svg.contact-icon
+                use(xlink:href='#envelope')
               span.contacts__text vsebydetkaknado@gmail.com
             li.contacts__item
-              include ../icons/phone2.svg
+              svg.contact-icon
+                use(xlink:href='#phone')
               span.contacts__text +7 953 172 51 08
             li.contacts__item
-              include ../icons/map_marker.svg
+              svg.contact-icon
+                use(xlink:href='#map_marker')
               span.contacts__text Санкт-Петербург
   include common/_footer
   script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_7umeeXFKJy0XukfBuBJT5PtOvGZ8Rxk&callback=initMap",async defer)
