@@ -3,18 +3,44 @@
 //-------------------------Welcome Flip Card Function-----------//
  $(document).ready(function () {
 
+$(document).on('click', function (e) {
+  if($(e.target).is('.button')) { 
+         $('#fl').toggleClass('flip');
+         $('.button').css({'opacity':0,'visibility':'hidden'});
+       }
+   if($(e.target).is('#back','#exit')) {
+          $('#fl').removeClass('flip');
+          $('.button').css({'opacity':1,'visibility':'visible'});
+      }
+   if($(e.target).is('#exit')) {
+          $('#fl').removeClass('flip');
+          $('.button').css({'opacity':1,'visibility':'visible'});
+      }      
+});
+
+     $('#nav__btn').on('click', function (e) {
 
 
-      $('.button').on('click', function(e) {
-          $('#fl').toggleClass('flip');
-          $('.button').css({'opacity':0,'visibility':'hidden'});
+       if($('.menu_btn').hasClass('active')) {
+          $(this).removeClass('active');
+        } else { 
+       $(this).toggleClass('active');    
+        } 
       });
-      $(document).on('click', function (e) {
-          if ($(e.target).is('#good, .button, .mainframe') === false) {
-              $('#fl').removeClass('flip');
-              $('.button').css({'opacity':1,'visibility':'visible'});
-          }
+
+    $(".nav__item").each(function(index) {
+     $(this).css("transition-delay", 0.3+0.1*index + "s");
+     });
+
+    $('.swipe__btn').on('click', function(){
+
+    if($('.aside').hasClass('active')) {
+       $('.aside').removeClass('active');
+      } else { $('.aside').addClass('active')}
+
+
       });
+
 
       $('.aside__item-link').on('click', function(e) {
           e.preventDefault();
@@ -22,25 +48,24 @@
           showArticle($(this).attr('href'),true);
       });
 
-   // showArticle(window.location.hash,false);
- });
+   showArticle(window.location.hash,false);
+ 
 
- // function showArticle(article,isAnimate) {
- //        var 
- //            direction = article.replace(/#/,''),
- //            reqArticle = $('.article__container').filter('[data-type="'+ direction + '"]'),
- //            reqArticlePos = reqArticle.offset().top;
+ function showArticle(article,isAnimate) {
+        var 
+            direction = article.replace(/#/,''),
+            reqArticle = $('.article__container').filter('[data-type="'+ direction + '"]'),
+            reqArticlePos = reqArticle.offset().top;
           
- //          if(isAnimate) {
- //            $('body, html').animate({ scrollTop: reqArticlePos},1000);
- //          }
- //          else {
- //            $('body, html').scrollTop(reqArticlePos);
- //          }
+          if(isAnimate) {
+            $('body, html').animate({ scrollTop: reqArticlePos},1000);
+          }
+          else {
+            $('body, html').scrollTop(reqArticlePos);
+          }
 
- //      }
-
-function spyList() {
+      };
+       function spyList() {
 
 $('.article__container').each(function(){
      
@@ -51,16 +76,17 @@ $('.article__container').each(function(){
 
          if(topEdge   < wScroll && bottomEdge > wScroll ) {
           var 
-            currentId = $this.data('type'),
+            currentId = $this.data('type');
             reqLink = $('.aside__item-link').filter('[href="#' + currentId + '"]');
-            reqLink.closest('.aside__list-item').addClass('active')
-            .siblings().removeClass('active');
+            reqLink.closest('.aside__list-item').addClass('active').siblings().removeClass('active');
 
             window.location.hash = currentId;
-         }
+         };
    }); // -> scroll_end;
   };
 
+});
+//--------------------------SLIDER----------------------------------//
 $(document).ready(function () {
 
   $(function () {
@@ -240,7 +266,7 @@ $(document).ready(function () {
 $(window).scroll(function(){
   var wScroll = $(window).scrollTop();
   
-  spyList();
+  
   (function(){
       
     var
@@ -262,9 +288,10 @@ $(window).scroll(function(){
     }
   }());
 
-  
+
+
    (function(){
-    var
+    var wScroll = $(window).scrollTop(),
         menu = $('.blog-container .aside__list'),
         sidebar = $('.blog-container .wrapper__list'),
         stickyStart = sidebar.offset().top,
@@ -342,12 +369,12 @@ $(window).scroll(function(){
 
 
 
-//  $(document).ready(function () {
+ $(document).ready(function () {
 
-// var scene = document.getElementById('scene');
-// var parallax = new Parallax(scene);
+var scene = document.getElementById('scene');
+var parallax = new Parallax(scene);
   
-// })
+})
 // --------------------------Slider Section--------------------------//
 
 
@@ -370,19 +397,6 @@ $(window).scroll(function(){
 
 //----------------------Navigation click function--------------------//
 
-$('#nav__btn').on('click', function (e) {
-
-
-if($('.menu_btn').hasClass('active')) {
-    $(this).removeClass('active');
-} else { 
-    $(this).toggleClass('active');    
-} 
-});
-
-$(".nav__item").each(function(index) {
-    $(this).css("transition-delay", 0.3+0.1*index + "s");
-  });
 
 // -----------------------STICKY BLOG SECTION --------------------//
 
@@ -391,14 +405,6 @@ $(".nav__item").each(function(index) {
 
 
 // //----------------------------SWIPE MENU--------------------------//
-$('.swipe__btn').on('click', function(){
-
-if($('.aside').hasClass('active')) {
-    $('.aside').removeClass('active');
-} else { $('.aside').addClass('active')}
-
-
-});
 
 
 //---------------------------SPY SCROLL----------------------------//

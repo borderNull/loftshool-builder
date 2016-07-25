@@ -2,7 +2,7 @@ doctype html
 html
  include common/_head
  body.body-welcome
-   .parallax-wrapper
+   .parallax-wrapper#test
     ul#scene.parallax__list
      li.layer(data-depth="0.1")
       .layer0.layer-img
@@ -23,7 +23,7 @@ html
      li.layer(data-depth="0.8")
       .layer8.layer-img
      li.layer(data-depth="0.9")
-      .layer9.layer-img  	
+      .layer9.layer-img#exit 	
   header.header__welcome
    .auth
     .button#auth Авторизоваться
@@ -68,3 +68,8 @@ html
            a(href="#").submit__form_link.first#back На главную
            a(href="#").submit__form_link.last#submit Войти
   footer.footer-welcome &copy Бутин Максим | создано с любовью в LoftSchool | 2016
+  script. 
+     var scene = document.getElementById('scene');
+     var parallax = new Parallax(scene);
+ 
+   

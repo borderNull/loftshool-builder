@@ -8,7 +8,8 @@ global.$ = {
     template: require('./gulp/paths/template.js'),
     jsFoundation: require('./gulp/paths/js.foundation.js'),
     cssFoundation: require('./gulp/paths/css.foundation.js'),
-    app: require('./gulp/paths/app.js')
+    app: require('./gulp/paths/app.js'),
+    parallax: require('./gulp/paths/parallax.js')
   },
   gulp: require('gulp'),
   rimraf: require('rimraf'),
@@ -27,6 +28,7 @@ $.gulp.task('default', $.gulp.series(
     'jade',
     'js.foundation',
     'js.process',
+    'parallax.js',
     'copy.image',
     'css.foundation',
     'copy.fonts',

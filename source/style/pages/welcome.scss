@@ -106,19 +106,6 @@ position: absolute;
   }
 }
 
-
-.footer-welcome {
-	position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 60px;
-    width: 100%;
-	font: 16px/1 'robotolight',sans-serif;;
-	text-align: center;
-	color: #fff;
-	
-}
-
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000px;
@@ -240,7 +227,8 @@ position: absolute;
 
 }
 .icons {
-  
+  width: 30px;
+  height: 30px;
   fill:#6fd1c6;
   &:hover {
     fill:#00bfa5;
@@ -489,6 +477,17 @@ transition: 1s;
   &.last {
     border-bottom-right-radius: 5px;
   }
+}
+.footer-welcome {
+  position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+  font: 16px/1 'robotolight',sans-serif;;
+  text-align: center;
+  color: #fff;
+  
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
