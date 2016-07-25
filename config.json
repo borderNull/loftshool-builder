@@ -1,0 +1,28 @@
+{
+	'db': {
+	  'host':'localhost',
+	  'port':'27017',
+	  'name':'portfolio',
+	  'user':'',
+	  'password':'' 
+	},
+
+	'http': {
+		'port':'3000',
+		'host':'localhost',
+		'publicRoot':'public'
+	},
+
+	'mail': {
+		'subject': 'Message from site',
+	'smtp':{
+		'host':'smtp.gmail.com',
+		'port':465,
+		'secure':true,
+		'auth': {
+			'user':'vsebydetkaknado@gmail.com',
+			'pass': 12345
+		}
+	  }
+   }
+}
