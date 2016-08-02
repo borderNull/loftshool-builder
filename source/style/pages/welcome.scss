@@ -4,6 +4,8 @@
 	min-height: 650px;
 }
 
+
+
  .parallax-wrapper {
 position: absolute;
     overflow: hidden;
@@ -110,6 +112,11 @@ position: absolute;
 .flip-container {
 	perspective: 1000px;
   flex: 1 0 auto;
+  transition: all 0.6s; 
+
+  &.loaded  {
+    
+  }
 }
 	/* flip the pane when hovered */
 	.flip-container.flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
@@ -131,7 +138,7 @@ position: absolute;
 .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
-
+  height: 100%;
 	position: relative;
 }
 

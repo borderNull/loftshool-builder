@@ -1,0 +1,32 @@
+doctype html
+html
+ include common/_head
+ body
+    .header__admin
+     h1.header__admin_title Панель администрирования
+     a.header__admin_exit(href='#') Вернуться на сайт
+    ul.tabs__list
+     li.tab__item
+      a.tab__link(href="#") One
+     li.tab__item
+      a.tab__link(href="#") Two
+     li.tab__item
+      a.tab__link(href="#") Three 
+    .content__admin_section
+     form(method='post').first-tab-form
+      .tab#first-tab
+       h3.tab__title Страница "Обо мне"
+       .skillset
+        h5.skills__title Frontend
+        label(for="html").skillset__label Html
+        input(type="text",id="html").skillset__input
+        span.skillset__span %
+        label(for="css").skillset__label Css
+        input(type="text",id="css").skillset__input
+        span.skillset__span %
+        label(for="js").skillset__label Javascript
+        input(type="text",id="js").skillset__input
+        span.skillset__span %
+
+       
+

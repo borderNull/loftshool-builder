@@ -2,7 +2,16 @@ doctype html
 html
  include common/_head
  body.body-welcome
-   .parallax-wrapper#test
+  .preloader__section
+  .preloader__container
+   .preloader__text 0
+   svg.preloader__round(version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve")
+     circle.circle__outer.circle(opacity="0.4" fill="none" stroke-dasharray="439.822971503" stroke-dashoffset="439.822971503" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" enable-background="new    " cx="72" cy="71.999" r="70")
+     circle.circle__center.circle(opacity="0.7" fill="none" stroke-dasharray="345.575191895" stroke-dashoffset="345.575191895" stroke="#FFFFFF" stroke-width="3.8938" stroke-miterlimit="10" enable-background="new    " cx="72" cy="72" r="55").
+     circle.circle__inner.circle(fill="none" stroke-dasharray="251.327412287" stroke-dashoffset="251.327412287" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" cx="72" cy="72" r="40")
+     text.preloader__inner__text(transform="matrix(1 0 0 1 51.5391 79.0127)" fill="#FFFFFF" font-family="'ArialMT'" font-size="24")
+  .parallax-wrapper#test
     ul#scene.parallax__list
      li.layer(data-depth="0.1")
       .layer0.layer-img
@@ -68,8 +77,4 @@ html
            a(href="#").submit__form_link.first#back На главную
            a(href="#").submit__form_link.last#submit Войти
   footer.footer-welcome &copy Бутин Максим | создано с любовью в LoftSchool | 2016
-  script. 
-     var scene = document.getElementById('scene');
-     var parallax = new Parallax(scene);
- 
-   
+  script(src='/assets/js/parallax.min.js' defer)
